@@ -13,7 +13,3 @@ def show_magicians(old_list, new_list):
         print(magician)
     for great_magician in new_list:
         print(great_magician)
-
-
-great_show = make_great(favorite_magicians[:])
-print_magicians = show_magicians(favorite_magicians, new_list)
