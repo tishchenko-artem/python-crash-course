@@ -21,10 +21,25 @@ class Restaurant():
         else:
             print('You cannot serve a negative number of customers')
 
-restaurant1 = Restaurant('velour', 'ukrainian')
-restaurant1.set_number_served(0)
-restaurant1.increment_number_served(-3)
-restaurant1.describe_restaurant()
+
+class IceCreamStand(Restaurant):
+
+    def __init__(self, restaurant_name, cuisine_type, flavours):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavours = flavours
+
+    def print_flavours(self):
+        print('Ice cream flavors are currently available:')
+        for el in self.flavours:
+            print(el)
+
+IceCream = IceCreamStand('Velour', 'ukrainian', ['chocolate', 'milk', 'strawberry'])
+IceCream.print_flavours()
+
+# restaurant1 = Restaurant('velour', 'ukrainian')
+# restaurant1.set_number_served(0)
+# restaurant1.increment_number_served(-3)
+# restaurant1.describe_restaurant()
 
 # restaurant2 = Restaurant('Eleven Madison Park', 'american')
 # restaurant3 = Restaurant('Mirazur', 'French')
